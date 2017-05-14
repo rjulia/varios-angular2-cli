@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { NgStyleComponent } from './component/ng-style/ng-style.component';
 import { CssComponent } from './component/css/css.component';
 import { ClasesComponent } from './component/clases/clases.component';
+import { ResaltadoDirective } from './directivess/resaltado.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgStyleComponent,
     CssComponent,
-    ClasesComponent
+    ClasesComponent,
+    ResaltadoDirective
   ],
   imports: [
     BrowserModule,
