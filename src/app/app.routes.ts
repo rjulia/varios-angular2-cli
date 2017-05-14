@@ -2,9 +2,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './component/home/home.component';
 import { UsuarioComponent } from "./component/usuario/usuario.component";
-import { UsuarioNuevoComponent } from "./component/usuario/usuario-nuevo.component";
-import { UsuarioEditarComponent } from "./component/usuario/usuario-editar.component";
-import { UsuarioDetalleComponent } from "./component/usuario/usuario-detalle.component";
+
+import { USUARIO_ROUTES } from "./component/usuario/usuario.routes";
+
 
 
 
@@ -14,12 +14,7 @@ const APP_ROUTES: Routes = [
     
     { path: 'usuario/:id', 
     component: UsuarioComponent ,
-    children:[
-        { path: 'nuevo', component: UsuarioNuevoComponent },
-        { path: 'detalle', component: UsuarioDetalleComponent },
-        { path: 'editar', component: UsuarioEditarComponent },
-        { path: '**', pathMatch:'full', redirectTo: 'nuevo' },
-    ]
+    children:USUARIO_ROUTES
 },
 
 
